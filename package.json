@@ -1,0 +1,18 @@
+{
+  "name": "filesharing_webapp",
+  "version": "1.0.0",
+  "description": "I have used tailwind CSS and EJS for frontend to create UI of web app. For backend I used express.js to create routes and handling the errors. This just a simple file sharing web app.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
