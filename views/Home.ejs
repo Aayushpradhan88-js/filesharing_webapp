@@ -5,24 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- linking to public folder -->
     <link rel="stylesheet" href="/stylesheets/style.css">
+    
+    <!-- tailwindcss cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body class="bg-black">
+
     <div class="main w-full min-h-screen">
         <div class="form p-10 text-black">
             <form action="/create" method="post">
+                <!-- Topic Title -->
                 <input class="block w-2/4 mt-5 px-5 py-2 ml-5 outline-none rounded-md" type="text" name="title"
                     placeholder="Title:- ...............">
+
+                <!-- Details of a Topic -->
                 <textarea class=" block w-2/4 mt-5 px-5 py-2 ml-5 resize-none outline-none rounded-md" name="details"
                     placeholder="Write your task details here .........."></textarea>
-                <input class="block mt-9 bg-blue-600 px-2 py-2 rounded-md ml-5" type="submit" value="Create Task">
 
+                <!-- Submit Button -->
+                <input class="block mt-9 bg-blue-600 px-2 py-2 rounded-md ml-5" type="submit" value="Create Task">
             </form>
         </div>
 
+        <!-- cards -->
         <div class="tasks flex gap-4 flex-wrap p-10">
             <% if(files.length> 0) { %>
                 <% files.forEach((val)=> { %>
@@ -38,21 +47,9 @@
                     <% }) %>
                         <% } else { %>
                             <h1 class="text-zinc-600">no task yet.</h1>
-                            <% } %>
+            <% } %>
         </div>
     </div>
-
-    <div class="p-6 bg-zinc-700 flex item-center" id="hover">
-        <nav>
-            <div>
-                <svg id="menu" class="cursor-pointer hover:" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"     fill="currentColor">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z"></path>
-                </svg>
-            </div>
-        </nav>
-    </div>
-      o
     <script src="/javascripts/script.js"></script>
 </body>
 
